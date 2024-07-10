@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .navbar::after{
+        @apply content-[''] bg-black h-[0.9px] w-[0] absolute left-0 bottom-[2px] rounded-xl duration-300
+    }
+    .navbar:hover::after{
+       @apply w-[100%]
+    }
+
+    .socialLinks::before{
+        @apply content-[''] bg-black h-[0.5px] w-[100%] absolute left-0 bottom-[1px] rounded-xl duration-0
+    }
+    .socialLinks::after{
+        @apply content-[''] bg-black h-[0.5px] w-[0] absolute left-0 bottom-[1px] rounded-xl duration-300
+    }
+    .socialLinks:hover::before{
+        @apply w-[0]
+    }
+    .socialLinks:hover::after{
+        @apply w-[100%]
+    }
+
+    .wordLinks::after{
+        @apply content-[''] bg-black h-[0.2vw] w-[0] left-0 bottom-[1px] rounded-xl delay-0 duration-500 absolute
+    }
+    .wordLinks:hover::after{
+        @apply w-[99%]
+    }
+
+    .btn--primary{
+        background: #212121;
+    }
+    .btn--primary{
+        color: #fff;
+        box-shadow: inset 0 0 0 1px #212121;
+    }
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 2rem 2.4rem;
+        cursor: pointer;
+        font-family: NeueMontreal,Roboto,sans-serif;
+        font-size: 1.4rem;
+        line-height: 1;
+        font-weight: 400;
+        transition-property: color,background-color,border-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+        transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;
+        transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+        transition-timing-function: cubic-bezier(.215,.61,.355,1);
+        transition-duration: .3s;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        border-radius: 9999px;
+        box-shadow: inset 0 0 0 1px transparent;
+        will-change: transform;
+        overflow: hidden;
+        text-transform: uppercase
+    }
+    .btn>* {
+        position: relative;
+        z-index: 2
+    }
+    .btn::after {
+        transition-property: color,background-color,border-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+        transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;
+        transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+        transition-timing-function: cubic-bezier(.215,.61,.355,1);
+        transition-duration: .7s;
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        left: -3rem;
+        right: -3rem;
+        top: -100%;
+        bottom: -100%;
+        transform-origin: top;
+        transform: scaleY(0);
+        will-change: transform
+    }
+    .icon-arrow-right-up::before{
+        content: "";
+    }
+    *, :after, :before {
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgba(59,130,246,0.5);
+        --tw-ring-offset-shadow: 0 0 transparent;
+        --tw-ring-shadow: 0 0 transparent;
+        --tw-shadow: 0 0 transparent;
+        --tw-shadow-colored: 0 0 transparent;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+    }
+    :after, :before {
+        --tw-content: "";
+    }
+    *, :after, :before {
+        box-sizing: border-box;
+        border: 0 solid #e7e7e7;
+    }
+
+    .btn_icon--append{
+        margin-left: 1.9rem;
+    }
+    .btn_icon {
+        flex-shrink: 0;
+        width: 4.2rem;
+        height: 4.2rem;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -1.4rem;
+        margin-bottom: -1.4rem;
+        margin-right: -1.7rem;
+        font-size: 1rem;
+        transition-property: opacity;
+        transition-timing-function: cubic-bezier(.215,.61,.355,1);
+        transition-duration: .3s
+    }
+    .btn_icon::before{
+        transition-property: opacity, color;
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+        z-index: 2;
+        opacity: 0;
+    }
+    .btn_icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background-color: currentColor;
+        transition-property: color,background-color,border-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+        transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;
+        transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-text-decoration-color,-webkit-backdrop-filter;
+        transition-timing-function: cubic-bezier(.215,.61,.355,1);
+        transition-duration: .3s;
+        transform: scale(.2);
+        transform-origin: center
+    }
+    .btn_icon--prepend{
+        margin-right: 1.9rem;
+    }
+    .btn_icon:only-child{
+        margin: 0;
+    }
+}
